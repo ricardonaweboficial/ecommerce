@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace Hcode;
 
@@ -14,13 +14,13 @@ class Page {
 
 	];
 
-	public function __construct($opts = array()) {
+	public function __construct($opts = array(), $tpl_dir = "/views/") {
 
 		$this->options = array_merge($this->defaults, $opts);
 
 		$config = array(
-						"tpl_dir"       => $_SERVER["DOCUMENT_ROOT"]."/ecommerce/views/",
-						"cache_dir"     => $_SERVER["DOCUMENT_ROOT"]."/ecommerce/views-cache/",
+						"tpl_dir"       => $_SERVER["DOCUMENT_ROOT"].$tpl_dir,
+						"cache_dir"     => $_SERVER["DOCUMENT_ROOT"]."/views-cache/",
 						"debug"         => false
 					   );
 
